@@ -11,6 +11,18 @@
 
 (function() {
 
-    // your code here
+
+    document.getElementById('run').addEventListener('click', function () {
+        let daysOfMonth = document.getElementById('dob-day').value;
+        let months = document.getElementById('dob-month').value;
+        let years = document.getElementById('dob-year').value;
+
+        let now = new Date();
+        let fullYear = now.getFullYear() - years;
+        let fullMonths = now.getMonth() - months;
+        let days = now.getDate() - daysOfMonth;
+        let age = (fullMonths<0||(fullMonths===0 && days ===0)) ? fullYear-1 : fullYear;
+        alert(`your age is ${age}`);
+    })
 
 })();

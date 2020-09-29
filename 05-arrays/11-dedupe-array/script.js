@@ -28,6 +28,9 @@
         "cerise",
     ];
 
-    // your code here
+    document.getElementById('run').addEventListener('click', function () {
+        let uniek = (fruits) => fruits.filter((a, b)=> fruits.indexOf(a) === b);
+        console.log(uniek(fruits));
+    })
 
 })();

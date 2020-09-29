@@ -89,6 +89,15 @@
         },
     ];
 
-    // your code here
+    document.getElementById('run').addEventListener('click', function () {
+        function findDupont(){
+            people.forEach(people => {
+                if (people.firstname === "Jean" && people.lastname === "Dupont"){
+                    console.log(people.email);
+                }
+            })
+        }
+        findDupont();
+    })
 
 })();

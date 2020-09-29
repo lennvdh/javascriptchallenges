@@ -12,7 +12,7 @@
 (function() {
 
     var fruits = [
-        "apple",
+        //"apple",
         "perry",
         "strawberry",
         "tomato",
@@ -26,6 +26,12 @@
         "cherry",
     ];
 
-    // your code here
+    document.getElementById('run').addEventListener('click', function () {
+        if (fruits.includes('apple')){
+            console.log('yes')
+        }else{
+            console.log('no')
+        }
+    })
 
 })();

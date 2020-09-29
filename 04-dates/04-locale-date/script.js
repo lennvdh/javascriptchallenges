@@ -11,8 +11,15 @@
 
 (function() {
 
-    // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
+    let now = new Date();
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+    let day = now.getDate();
+    let month = now.getMonth();
+    let year = now.getFullYear();
 
-    // your code here
+    document.getElementById('target').innerText =
+        day + "/" + month + "/" + year + "  " + hours + ":" + minutes;
+
 
 })();

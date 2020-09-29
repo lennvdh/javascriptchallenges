@@ -11,6 +11,13 @@
 
 (function() {
 
-    document.getElementById('red')
+    function changeBGColor(color) {
+        document.body.style.backgroundColor = color;
+    }
+
+    document.getElementById('red').addEventListener('click', function () {changeBGColor('red')});
+    document.getElementById('green').addEventListener('click', function () {changeBGColor('green')});
+    document.getElementById('yellow').addEventListener('click', function () {changeBGColor('yellow')});
+    document.getElementById('blue').addEventListener('click', function () {changeBGColor('blue')});
 
 })();
