@@ -11,6 +11,21 @@
 
 (function() {
 
-    // your code here
+    let target = document.getElementById('target');
+    let str = target.innerHTML.replace(/\s{2,}/g,' ');
+    let strArray = str.split('');
+    target.innerHTML ='';
+
+    let i = 0;
+    showText();
+
+    function showText(){
+        if (i < strArray.length){
+            let time = 100 + Math.floor(Math.random()*5000);
+            target.innerHTML += strArray[i];
+            i++;
+            setInterval(showText,time*i);
+        }
+    }
 
 })();

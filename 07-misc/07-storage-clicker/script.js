@@ -11,6 +11,13 @@
 
 (function() {
 
-    // your code here
+    let target = document.getElementById('target');
+    let num = (localStorage.getItem('value')) ? localStorage.getItem('value') : parseInt(target.innerHTML);
+    target.innerHTML = num;
+    document.getElementById('increment').addEventListener('click',()=>{
+        num++;
+        target.innerHTML = num;
+        window.localStorage.setItem('value', num);
+    })
 
 })();

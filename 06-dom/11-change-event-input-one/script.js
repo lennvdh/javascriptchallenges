@@ -11,6 +11,11 @@
 
 (function() {
 
-    // your code here
+    let pw1 = document.getElementById('pass-one');
+    pw1.maxLength = "10";
+
+    pw1.addEventListener('keyup', ()=>{
+        document.getElementById('counter').innerHTML = `${pw1.value.length}`
+    })
 
 })();

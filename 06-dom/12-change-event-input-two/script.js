@@ -11,6 +11,12 @@
 
 (function() {
 
-    // your code here
+    pw1 = document.getElementById('pass-one');
+    validate = document.getElementById('validity');
 
+    pw1.addEventListener('keyup', function () {
+        validate.innerHTML = "";
+        let pattern = /^(?=.*?[0-9].*?[0-9])[0-9a-zA-Z!@#$%0-9]{8,}$/;
+        validate.innerHTML = (pattern.test(pw1.value)) ? 'Ok' : 'Not ok'
+    })
 })();

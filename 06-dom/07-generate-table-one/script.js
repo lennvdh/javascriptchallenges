@@ -11,6 +11,21 @@
 
 (function() {
 
-    // your code here
+    const target = document.getElementById('target');
+    let table = document.createElement('table');
+    let tbody = document.createElement('tbody');
+    for (let i = 0; i <10 ; i++) {
+        var row = document.createElement('tr');
+        for (let j = 0; j <5 ; j++) {
+            var column = document.createElement('td');
+            var cellText = document.createTextNode('Hello World!!');
+            column.appendChild(cellText);
+            row.appendChild(column);
+        }
+        tbody.appendChild(row)
+    }
+    table.appendChild(tbody);
+    target.appendChild(table);
+    table.setAttribute('border', '2');
 
 })();

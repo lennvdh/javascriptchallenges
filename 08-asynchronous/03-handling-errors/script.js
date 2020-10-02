@@ -10,5 +10,15 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    document.getElementById('run').addEventListener('click',()=>{
+        let forPer = (error, res) => {
+            if(error){
+                console.error('error here');
+            } else {
+                console.table(res);
+            }
+        }
+        window.lib.getPersons(forPer);
+
+    })
 })();

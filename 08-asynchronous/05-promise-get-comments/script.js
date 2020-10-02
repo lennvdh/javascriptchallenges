@@ -10,5 +10,9 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    document.getElementById('run').addEventListener('click',()=>{
+        const handleSuccess = (res) => console.table(res);
+        const handleSuccessPost = (res) => window.lib.getComments(res);
+        window.lib.getPosts().then(handleSuccessPost).then(handleSuccess);
+    })
 })();

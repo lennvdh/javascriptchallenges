@@ -10,5 +10,14 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    document.getElementById('run').addEventListener('click', ()=>{
+        let url = '../../_shared/api.json';
+        let heroId = document.getElementById('hero-id').value;
+        fetch(url)
+            .then(res => res.json())
+            .then(data => data.heroes)
+            .then(heroes => {
+                console.table(heroes.filter(item => item.id != heroId));
+            })
+    })
 })();

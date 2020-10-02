@@ -10,5 +10,9 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    document.getElementById('run').addEventListener('click', ()=>{
+        const handleSuccess = (res) => console.table(res);
+        const handleError = (err) => console.error('Error here');
+        window.lib.getPersons().then(handleSuccess).catch(handleError);
+    })
 })();
